@@ -1,0 +1,266 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 3 6
+Title "Digital Clock"
+Date "2020-11-03"
+Rev "v1.0"
+Comp "Guilherme Gomes"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L power:+5V #PWR08
+U 1 1 5FC3129D
+P 4200 2400
+F 0 "#PWR08" H 4200 2250 50  0001 C CNN
+F 1 "+5V" H 4215 2573 50  0000 C CNN
+F 2 "" H 4200 2400 50  0001 C CNN
+F 3 "" H 4200 2400 50  0001 C CNN
+	1    4200 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR014
+U 1 1 5FC312A4
+P 4200 4450
+F 0 "#PWR014" H 4200 4200 50  0001 C CNN
+F 1 "GNDREF" H 4205 4277 50  0000 C CNN
+F 2 "" H 4200 4450 50  0001 C CNN
+F 3 "" H 4200 4450 50  0001 C CNN
+	1    4200 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR012
+U 1 1 5FC312AA
+P 3500 3750
+F 0 "#PWR012" H 3500 3500 50  0001 C CNN
+F 1 "GNDREF" H 3505 3577 50  0000 C CNN
+F 2 "" H 3500 3750 50  0001 C CNN
+F 3 "" H 3500 3750 50  0001 C CNN
+	1    3500 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4017 U4
+U 1 1 5FC312C2
+P 6950 3350
+F 0 "U4" H 7100 4150 50  0000 C CNN
+F 1 "4017" H 7100 4050 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 6950 3350 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4017bms-22bms.pdf" H 6950 3350 50  0001 C CNN
+	1    6950 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR09
+U 1 1 5FC312C8
+P 6950 2400
+F 0 "#PWR09" H 6950 2250 50  0001 C CNN
+F 1 "+5V" H 6965 2573 50  0000 C CNN
+F 2 "" H 6950 2400 50  0001 C CNN
+F 3 "" H 6950 2400 50  0001 C CNN
+	1    6950 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 2400 6950 2500
+Wire Wire Line
+	7450 3050 7700 3050
+Wire Wire Line
+	7700 3050 7700 4350
+Wire Wire Line
+	7700 4350 6350 4350
+Wire Wire Line
+	6350 4350 6350 3150
+Wire Wire Line
+	6350 3150 6450 3150
+Wire Wire Line
+	4200 4450 4200 4250
+Wire Wire Line
+	6450 2850 5900 2850
+Wire Wire Line
+	5900 2850 5900 3950
+Wire Wire Line
+	5900 3950 4700 3950
+$Comp
+L power:GNDREF #PWR015
+U 1 1 5FC312E0
+P 6950 4450
+F 0 "#PWR015" H 6950 4200 50  0001 C CNN
+F 1 "GNDREF" H 6955 4277 50  0000 C CNN
+F 2 "" H 6950 4450 50  0001 C CNN
+F 3 "" H 6950 4450 50  0001 C CNN
+	1    6950 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6950 4450 6950 4250
+Wire Wire Line
+	7850 2950 7450 2950
+$Comp
+L Device:C C7
+U 1 1 5FC312E9
+P 8850 2800
+F 0 "C7" H 8965 2846 50  0000 L CNN
+F 1 "100nF" H 8965 2755 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W5.0mm_P7.50mm" H 8888 2650 50  0001 C CNN
+F 3 "~" H 8850 2800 50  0001 C CNN
+	1    8850 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR011
+U 1 1 5FC312EF
+P 8850 3100
+F 0 "#PWR011" H 8850 2850 50  0001 C CNN
+F 1 "GNDREF" H 8855 2927 50  0000 C CNN
+F 2 "" H 8850 3100 50  0001 C CNN
+F 3 "" H 8850 3100 50  0001 C CNN
+	1    8850 3100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8850 3100 8850 2950
+Wire Wire Line
+	8850 2500 6950 2500
+Wire Wire Line
+	8850 2500 8850 2650
+Connection ~ 6950 2500
+Wire Wire Line
+	6950 2500 6950 2550
+Wire Wire Line
+	4950 3550 4850 3550
+Wire Wire Line
+	4850 3550 4850 3450
+Wire Wire Line
+	4850 3450 4700 3450
+Wire Wire Line
+	4950 3350 4850 3350
+Wire Wire Line
+	4850 3350 4850 2950
+Wire Wire Line
+	4850 2950 4700 2950
+Text HLabel 3400 2850 0    79   Input ~ 0
+osc
+Wire Wire Line
+	3400 2850 3700 2850
+Text HLabel 4950 3350 2    79   Output ~ 0
+fast
+Text HLabel 4950 3550 2    79   Output ~ 0
+slow
+Wire Wire Line
+	4200 2500 4200 2550
+Wire Wire Line
+	4200 2400 4200 2500
+Connection ~ 4200 2500
+Wire Wire Line
+	5400 3000 5400 2950
+$Comp
+L power:GNDREF #PWR010
+U 1 1 5FC312BB
+P 5400 3000
+F 0 "#PWR010" H 5400 2750 50  0001 C CNN
+F 1 "GNDREF" H 5405 2827 50  0000 C CNN
+F 2 "" H 5400 3000 50  0001 C CNN
+F 3 "" H 5400 3000 50  0001 C CNN
+	1    5400 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 2500 5400 2650
+Wire Wire Line
+	4200 2500 5400 2500
+$Comp
+L Device:C C6
+U 1 1 5FC312B1
+P 5400 2800
+F 0 "C6" H 5515 2846 50  0000 L CNN
+F 1 "100nF" H 5515 2755 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W5.0mm_P7.50mm" H 5438 2650 50  0001 C CNN
+F 3 "~" H 5400 2800 50  0001 C CNN
+	1    5400 2800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:4020 U3
+U 1 1 5FC31295
+P 4200 3350
+F 0 "U3" H 4350 4150 50  0000 C CNN
+F 1 "4020" H 4350 4050 50  0000 C CNN
+F 2 "Package_DIP:DIP-16_W7.62mm_Socket_LongPads" H 4200 3350 50  0001 C CNN
+F 3 "http://www.intersil.com/content/dam/Intersil/documents/cd40/cd4020bms-24bms-40bms.pdf" H 4200 3350 50  0001 C CNN
+	1    4200 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R2
+U 1 1 5FC5CC06
+P 3500 3350
+F 0 "R2" H 3570 3396 50  0000 L CNN
+F 1 "10k" H 3570 3305 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 3430 3350 50  0001 C CNN
+F 3 "~" H 3500 3350 50  0001 C CNN
+	1    3500 3350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3500 3750 3500 3500
+Wire Wire Line
+	3500 3200 3500 3050
+Wire Wire Line
+	3500 3050 3700 3050
+Text HLabel 7850 2950 2    79   Output ~ 0
+clock_seg
+$Comp
+L power:GNDREF #PWR013
+U 1 1 5FC7D493
+P 6100 3750
+F 0 "#PWR013" H 6100 3500 50  0001 C CNN
+F 1 "GNDREF" H 6105 3577 50  0000 C CNN
+F 2 "" H 6100 3750 50  0001 C CNN
+F 3 "" H 6100 3750 50  0001 C CNN
+	1    6100 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R3
+U 1 1 5FC7E36E
+P 6100 3400
+F 0 "R3" H 6170 3446 50  0000 L CNN
+F 1 "10k" H 6170 3355 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 6030 3400 50  0001 C CNN
+F 3 "~" H 6100 3400 50  0001 C CNN
+	1    6100 3400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6100 3750 6100 3550
+Wire Wire Line
+	6100 3250 6100 2950
+Wire Wire Line
+	6100 2950 6450 2950
+NoConn ~ 4700 2850
+NoConn ~ 4700 3050
+NoConn ~ 4700 3150
+NoConn ~ 4700 3250
+NoConn ~ 4700 3350
+NoConn ~ 4700 3550
+NoConn ~ 4700 3650
+NoConn ~ 4700 3750
+NoConn ~ 4700 3850
+NoConn ~ 7450 2850
+NoConn ~ 7450 3150
+NoConn ~ 7450 3250
+NoConn ~ 7450 3350
+NoConn ~ 7450 3450
+NoConn ~ 7450 3550
+NoConn ~ 7450 3650
+NoConn ~ 7450 3750
+NoConn ~ 7450 3950
+$EndSCHEMATC

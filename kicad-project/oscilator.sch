@@ -1,0 +1,277 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 6
+Title "Digital Clock"
+Date "2020-11-03"
+Rev "v1.0"
+Comp "Guilherme Gomes"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:Crystal Y1
+U 1 1 5FB44ABF
+P 4200 3750
+F 0 "Y1" H 4200 4018 50  0000 C CNN
+F 1 "32.768 Hz" H 4200 3927 50  0000 C CNN
+F 2 "Crystal:Crystal_Round_D3.0mm_Vertical" H 4200 3750 50  0001 C CNN
+F 3 "~" H 4200 3750 50  0001 C CNN
+	1    4200 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 5FB44AC5
+P 4200 3200
+F 0 "R1" V 3993 3200 50  0000 C CNN
+F 1 "10M" V 4084 3200 50  0000 C CNN
+F 2 "Resistor_THT:R_Axial_DIN0204_L3.6mm_D1.6mm_P7.62mm_Horizontal" V 4130 3200 50  0001 C CNN
+F 3 "~" H 4200 3200 50  0001 C CNN
+	1    4200 3200
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:C C3
+U 1 1 5FB44AD1
+P 3750 4100
+F 0 "C3" H 3865 4146 50  0000 L CNN
+F 1 "22pF" H 3865 4055 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 3788 3950 50  0001 C CNN
+F 3 "~" H 3750 4100 50  0001 C CNN
+	1    3750 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C4
+U 1 1 5FB44AD7
+P 4650 4100
+F 0 "C4" H 4765 4146 50  0000 L CNN
+F 1 "22pF" H 4765 4055 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D3.0mm_W2.0mm_P2.50mm" H 4688 3950 50  0001 C CNN
+F 3 "~" H 4650 4100 50  0001 C CNN
+	1    4650 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:HEF4093B U2
+U 1 1 5FB44ADD
+P 6250 2600
+F 0 "U2" H 6250 2925 50  0000 C CNN
+F 1 "4093" H 6250 2834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 6250 2600 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4093B.pdf" H 6250 2600 50  0001 C CNN
+	1    6250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:HEF4093B U2
+U 2 1 5FB44AE3
+P 7250 2600
+F 0 "U2" H 7250 2925 50  0000 C CNN
+F 1 "4093" H 7250 2834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 7250 2600 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4093B.pdf" H 7250 2600 50  0001 C CNN
+	2    7250 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L 4xxx:HEF4093B U2
+U 4 1 5FB44AEF
+P 5300 2600
+F 0 "U2" H 5300 2925 50  0000 C CNN
+F 1 "4093" H 5300 2834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 5300 2600 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4093B.pdf" H 5300 2600 50  0001 C CNN
+	4    5300 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 2500 3800 2500
+Wire Wire Line
+	3800 2500 3800 2600
+Wire Wire Line
+	3800 2700 3900 2700
+Wire Wire Line
+	3750 2600 3800 2600
+Connection ~ 3800 2600
+Wire Wire Line
+	3800 2600 3800 2700
+Wire Wire Line
+	5000 2500 4900 2500
+Wire Wire Line
+	4900 2500 4900 2600
+Wire Wire Line
+	4900 2700 5000 2700
+Wire Wire Line
+	5950 2500 5850 2500
+Wire Wire Line
+	5850 2500 5850 2600
+Wire Wire Line
+	5850 2700 5950 2700
+Wire Wire Line
+	6950 2700 6800 2700
+Wire Wire Line
+	6800 2700 6800 2600
+Wire Wire Line
+	6800 2600 6550 2600
+Wire Wire Line
+	5600 2600 5850 2600
+Connection ~ 5850 2600
+Wire Wire Line
+	5850 2600 5850 2700
+Wire Wire Line
+	4500 2600 4650 2600
+Connection ~ 4900 2600
+Wire Wire Line
+	4900 2600 4900 2700
+Wire Wire Line
+	4650 3950 4650 3750
+Connection ~ 4650 2600
+Wire Wire Line
+	4650 2600 4900 2600
+Wire Wire Line
+	4350 3750 4650 3750
+Connection ~ 4650 3750
+Wire Wire Line
+	4650 3750 4650 3200
+Wire Wire Line
+	4050 3750 3750 3750
+Wire Wire Line
+	3750 2600 3750 3200
+Connection ~ 3750 3750
+Wire Wire Line
+	3750 3750 3750 3950
+Wire Wire Line
+	4350 3200 4650 3200
+Connection ~ 4650 3200
+Wire Wire Line
+	4650 3200 4650 2600
+Wire Wire Line
+	4050 3200 3750 3200
+Connection ~ 3750 3200
+Wire Wire Line
+	3750 3200 3750 3750
+$Comp
+L power:GNDREF #PWR06
+U 1 1 5FB44B26
+P 4650 4550
+F 0 "#PWR06" H 4650 4300 50  0001 C CNN
+F 1 "GNDREF" H 4655 4377 50  0000 C CNN
+F 2 "" H 4650 4550 50  0001 C CNN
+F 3 "" H 4650 4550 50  0001 C CNN
+	1    4650 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR05
+U 1 1 5FB44B2C
+P 3750 4550
+F 0 "#PWR05" H 3750 4300 50  0001 C CNN
+F 1 "GNDREF" H 3755 4377 50  0000 C CNN
+F 2 "" H 3750 4550 50  0001 C CNN
+F 3 "" H 3750 4550 50  0001 C CNN
+	1    3750 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 4550 3750 4250
+Wire Wire Line
+	4650 4250 4650 4550
+$Comp
+L 4xxx:HEF4093B U2
+U 5 1 5FB44B34
+P 6400 4150
+F 0 "U2" H 6630 4196 50  0000 L CNN
+F 1 "4093" H 6630 4105 50  0000 L CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 6400 4150 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4093B.pdf" H 6400 4150 50  0001 C CNN
+	5    6400 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GNDREF #PWR07
+U 1 1 5FB44B3A
+P 6400 4900
+F 0 "#PWR07" H 6400 4650 50  0001 C CNN
+F 1 "GNDREF" H 6405 4727 50  0000 C CNN
+F 2 "" H 6400 4900 50  0001 C CNN
+F 3 "" H 6400 4900 50  0001 C CNN
+	1    6400 4900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 4900 6400 4750
+$Comp
+L power:+5V #PWR04
+U 1 1 5FB44B41
+P 6400 3450
+F 0 "#PWR04" H 6400 3300 50  0001 C CNN
+F 1 "+5V" H 6415 3623 50  0000 C CNN
+F 2 "" H 6400 3450 50  0001 C CNN
+F 3 "" H 6400 3450 50  0001 C CNN
+	1    6400 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6400 3450 6400 3600
+$Comp
+L Device:C C5
+U 1 1 5FB44B48
+P 5800 4150
+F 0 "C5" H 5915 4196 50  0000 L CNN
+F 1 "100nF" H 5915 4105 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D9.0mm_W5.0mm_P7.50mm" H 5838 4000 50  0001 C CNN
+F 3 "~" H 5800 4150 50  0001 C CNN
+	1    5800 4150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5800 4000 5800 3600
+Wire Wire Line
+	5800 3600 6400 3600
+Connection ~ 6400 3600
+Wire Wire Line
+	6400 3600 6400 3650
+Wire Wire Line
+	6400 4750 5800 4750
+Wire Wire Line
+	5800 4750 5800 4300
+Connection ~ 6400 4750
+Wire Wire Line
+	6400 4750 6400 4650
+$Comp
+L power:+5V #PWR03
+U 1 1 5FB44B56
+P 6850 2350
+F 0 "#PWR03" H 6850 2200 50  0001 C CNN
+F 1 "+5V" H 6865 2523 50  0000 C CNN
+F 2 "" H 6850 2350 50  0001 C CNN
+F 3 "" H 6850 2350 50  0001 C CNN
+	1    6850 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6850 2350 6850 2500
+Wire Wire Line
+	6850 2500 6950 2500
+Text HLabel 8100 2600 2    79   Output ~ 0
+osc
+$Comp
+L 4xxx:HEF4093B U2
+U 3 1 5FB44AE9
+P 4200 2600
+F 0 "U2" H 4200 2925 50  0000 C CNN
+F 1 "4093" H 4200 2834 50  0000 C CNN
+F 2 "Package_DIP:DIP-14_W7.62mm_Socket_LongPads" H 4200 2600 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/HEF4093B.pdf" H 4200 2600 50  0001 C CNN
+	3    4200 2600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7550 2600 8100 2600
+$EndSCHEMATC
